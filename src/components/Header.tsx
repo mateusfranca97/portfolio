@@ -1,5 +1,4 @@
 import { Button } from "./ui/button"
-import DialogMobile from "./DialogMobile"
 
 const Header = () => {
     return (
