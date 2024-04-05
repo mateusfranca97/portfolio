@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
       <div className="pt-10 lg:h-full lg:pt-0 col-span-4 rounded-2xl text-white">
         <GlowCapture>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 gap-3">
             <Card >Sobre mim</Card>
             <Card>Meus Projetos</Card>
           </div>
@@ -32,7 +32,6 @@ const Hero = () => {
           </div>
         </GlowCapture>
       </div>
-      <CardEffect/>
     </main>
   )
 }
