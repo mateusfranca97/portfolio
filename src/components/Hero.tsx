@@ -1,12 +1,12 @@
 import { GlowCapture } from "@codaworks/react-glow"
 import { Button } from "./ui/button"
 import Card from "./Card"
-import { Figma, Forward, Instagram, Linkedin } from "lucide-react"
+import { Forward } from "lucide-react"
 
 const Hero = () => {
   return (
 
-    <GlowCapture className='h-[36rem] flex flex-col lg:grid grid-cols-12 gap-2'>
+    <GlowCapture className='lg:h-[36rem] flex flex-col lg:grid grid-cols-12 gap-2'>
       <div className="h-full col-span-8">
         <div className="h-96 text-white text-2xl flex flex-col justify-end gap-10">
           <h1 className="lg:text-5xl font-bold leading-snug select-none">Vamos <b className="text-tomato-900">COMEÇAR</b><br /> a construir algo grande <br /> juntos ?</h1>
