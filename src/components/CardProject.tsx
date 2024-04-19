@@ -26,8 +26,8 @@ const CardProject:React.FC<CardProjectProps> = ({title, description, srcImage, a
         </CardContent>
         <CardFooter className='flex justify-between items-center lg:pt-5'>
             <div className='flex lg:max-w-72 flex-wrap gap-2'>
-                {badge.map((badge) =>(
-                    <Badge className='text-[0.3rem] lg:text-xs'>{badge}</Badge>
+                {badge.map((key, badge) =>(
+                    <Badge key={key} className='text-[0.3rem] lg:text-xs'>{badge}</Badge>
                 ))}
             </div>
             <Button className='w-4 h-6 lg:w-10 lg:h-10'>
