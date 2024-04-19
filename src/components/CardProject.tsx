@@ -20,13 +20,13 @@ const CardProject:React.FC<CardProjectProps> = ({title, description, srcImage, a
         <CardHeader>
             <Image className='rounded-lg' src={srcImage} alt={altImage} width={500} height={500}/>
         </CardHeader>
-        <CardContent className=''>
-            <CardTitle className=''>{title}</CardTitle>
+        <CardContent>
+            <CardTitle>{title}</CardTitle>
             <CardDescription>{description}</CardDescription>
         </CardContent>
         <CardFooter className='flex justify-between items-center lg:pt-5'>
             <div className='flex lg:max-w-72 flex-wrap gap-2'>
-                {badge.map((key, badge) =>(
+                {badge.map((badge, key) =>(
                     <Badge key={key} className='text-[0.3rem] lg:text-xs'>{badge}</Badge>
                 ))}
             </div>
