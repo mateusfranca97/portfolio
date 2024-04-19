@@ -1,7 +1,7 @@
 import { GlowCapture } from "@codaworks/react-glow"
 import { Button } from "./ui/button"
 import Card from "./Card"
-import { CornerRightDown, Forward } from "lucide-react"
+import { Forward } from "lucide-react"
 
 const Hero = () => {
   return (

@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({ children, height = "medium", width = "mediu
         }
 
   return (
-    <Glow className={`cursor-pointer w-full ${getHeight()} ${getWidth()} bg-white/5 p-3 rounded-[calc(1rem-1px)] select-none border border-white/10 glow:text-glow`}>
+    <Glow className={`cursor-pointer w-full ${getHeight()} ${getWidth()} bg-white/5 p-3 rounded-[calc(1rem-1px)] select-none border border-white/10`}>
         <h1 className="font-bold text-white">{children}</h1>
     </Glow>
   )
