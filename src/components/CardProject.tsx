@@ -1,9 +1,12 @@
+"use client"
+
 import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import { ExternalLink} from 'lucide-react'
 import Image from 'next/image'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
+import { AspectRatio } from '@radix-ui/react-aspect-ratio'
 
 export interface CardProjectProps {
     title: string,
@@ -16,25 +19,30 @@ export interface CardProjectProps {
 
 const CardProject:React.FC<CardProjectProps> = ({title, description, srcImage, altImage, badge, href}) => {
   return (
-    <Card className='h-72 w-72 lg:w-96 lg:h-96 rounded-xl bg-gray-950/5 text-white flex flex-col justify-between'>
+    <Card className='h-72 w-72 lg:w-80 lg:h-[27rem] rounded-xl bg-gradient-to-tl from-gray-800 to-gray-950 border-transparent text-white flex flex-col justify-between group hover:cursor-pointer'>
         <CardHeader>
-            <Image className='rounded-lg' src={srcImage} alt={altImage} width={500} height={500}/>
+            <AspectRatio ratio={16/9}>
+                <Image className='rounded-lg group-hover:scale-[1.1] transition duration-50' src={srcImage} alt={altImage} width={500} height={500}/>
+            </AspectRatio>
         </CardHeader>
         <CardContent>
             <CardTitle>{title}</CardTitle>
             <CardDescription>{description}</CardDescription>
         </CardContent>
-        <CardFooter className='flex justify-between items-center lg:pt-5'>
+        <CardFooter className='flex flex-col gap-7'>
+            <div>
+                <a href={href} target='_blank'>
+                    <Button className='gap-3 lg:w-60 border border-white/30'>
+                        <p> Acessar projeto</p>
+                        <ExternalLink className='w-4 h-4'/>
+                    </Button>
+                </a>
+            </div>
             <div className='flex lg:max-w-72 flex-wrap gap-2'>
                 {badge.map((badge, key) =>(
                     <Badge key={key} className='text-[0.3rem] lg:text-xs'>{badge}</Badge>
                 ))}
             </div>
-            <Button className='w-4 h-6 lg:w-10 lg:h-10'>
-                <a href={href} target='_blank'>
-                <ExternalLink className='w-4 h-4'/>
-                </a>
-            </Button>
         </CardFooter>
     </Card>
   )

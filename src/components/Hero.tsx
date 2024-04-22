@@ -2,6 +2,7 @@ import { GlowCapture } from "@codaworks/react-glow"
 import { Button } from "./ui/button"
 import Card from "./Card"
 import { Forward } from "lucide-react"
+import { motion } from "framer-motion"
 
 const Hero = () => {
   return (
@@ -10,16 +11,35 @@ const Hero = () => {
       <div className="h-full col-span-8">
         <div className="h-96 text-white text-2xl flex flex-col justify-end gap-10">
           <h1 className="lg:text-5xl font-bold leading-snug select-none">Vamos <b className="text-tomato-800">COMEÇAR</b><br /> a construir algo grande <br /> juntos ?</h1>
-          <Button className="w-40 rounded-full hover:bg-tomato-800 hover:text-black transition-all duration-300 gap-2">Fale comigo <Forward width={15}/></Button>
+          <motion.button 
+            whileHover={{ scale: 1.10, rotate: "2.5deg"}}
+            transition={{
+              duration: 0.125,
+              ease: "easeOut"
+            }}
+            className="
+              flex
+              items-center
+              justify-center
+              h-10 w-40 
+              rounded-full 
+              hover:bg-tomato-800
+              hover:text-black 
+              transition-all 
+              duration-300 
+              gap-2
+              text-sm"
+              >Fale comigo <Forward width={15}/>
+          </motion.button>
         </div>
       </div>
       <div className="pt-10 lg:h-full lg:pt-0 col-span-4 text-white">
           <div className="grid grid-cols-2 gap-3">
             <Card >Sobre mim</Card>
-            <Card>Meus Projetos</Card>
+            <Card width="large">Experiencias</Card>
           </div>
           <div className="grid grid-cols gap-3 mt-3">
-            <Card width="large">Experiencias</Card>
+            <Card>Meus Projetos</Card>
           </div>
           <div className="grid grid-cols-2 gap-3 pt-4">
             <Card>Rede Social</Card>
