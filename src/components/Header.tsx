@@ -2,6 +2,7 @@
 
 import { Download } from "lucide-react"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 const Header = () => {
     return (

@@ -34,7 +34,7 @@ const MainSection = () => {
           <h1 className='lg:text-3xl font-semibold text-center'>Experiencias</h1>
         </div>
         <div className='text-sm lg:text-2xl py-10'>Explore meu portfólio. Estou sempre com novos projetos. Volte sempre para descobrir as últimas atualizações!</div>
-        <div className='grid grid-cols-2 lg:grid-cols-7 gap-5'>
+        <div className='grid grid-cols-2 md:grid-cols-5 lg:grid-cols-7 gap-5'>
           {
             CardExperience.map((e, key) => (
               <CardSkill key={key} src={e.src} alt={e.alt} badge={e.badge} />
@@ -48,7 +48,7 @@ const MainSection = () => {
           <span className='font-black lg:text-3xl'>03.</span>
           <h1 className='lg:text-3xl font-semibold text-center'>Projetos</h1>
         </div>
-        <div className='flex flex-col items-center justify-center  lg:grid lg:grid-cols-3 gap-y-14 lg:pl-10 pt-16'>
+        <div className='flex flex-col items-center justify-center lg:grid lg:grid-cols-3 gap-y-14 lg:pl-10 pt-16'>
           {ProjectsList.map((e, index) => (
             <CardProject key={index} title={e.title} description={e.description} srcImage={e.image.src} altImage={e.alt} href={e.href} badge={e.badge} />
           ))}

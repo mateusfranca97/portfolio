@@ -1,4 +1,4 @@
-import  copernicvs  from '../assets/copernicvs.png'
+import  copernicvs  from '../assets/img/copernicvs.png'
 
 export const ProjectsList = [
     {
